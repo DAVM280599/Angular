@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { GaleriaComponent } from './components/galeria/galeria.component';
+import { HojaDeVidaComponent } from './components/hoja-de-vida/hoja-de-vida.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: GaleriaComponent},
+  { path: 'galeria', component: GaleriaComponent},
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'curriculum', component: HojaDeVidaComponent },
+  { path: '404', component: NotFoundComponent},
+  { path: '**', redirectTo: '404', pathMatch: 'full'}
+  
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

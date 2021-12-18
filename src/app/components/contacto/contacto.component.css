@@ -1,0 +1,9 @@
+.contenedor {
+    border: solid 2px rgba(0, 0, 0, 0.371);
+    border-radius: 20px;
+    background-color: darkorchid;
+}
+
+h2 {
+    color: purple;
+}
